@@ -1,0 +1,17 @@
+.dropdown > .ans-dropdown {
+    width: 100%;
+}
+.ans-show {
+    width: 100%;
+}
+.ans1 {
+    text-align: center !important;
+}
+.dropdown :focus {
+    background-color: #1c3b71 !important;
+}
+.dropdown :active {
+    background-color: #1c3b71 !important;
+    border: none;
+
+}

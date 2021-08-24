@@ -1,0 +1,30 @@
+.add-question {
+    float: right;
+    margin-top: 2px;
+    color: #1c3b71;
+    cursor: pointer;
+}
+.quest-input {
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    margin-top: 50px;
+}
+.btn-success {
+    color: gray;
+    background-color: #ffffff;
+    border-color: gray;
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    margin-top: 20px;
+}
+
+.btn-success:hover {
+    background-color: #1c3b71 !important;
+}
+.close-icon {
+    font-size: 25px;
+    color: #1c3b71;
+    cursor: pointer;
+}

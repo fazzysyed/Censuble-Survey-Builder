@@ -1,0 +1,109 @@
+.survey-menu {
+    margin-top: 20px;
+    padding-top: 15px;
+}
+.survey-menu .slider-nav {
+    position: relative;
+    padding: 10px 0 10px 20px;
+    -webkit-box-shadow: 0 0 5px rgb(0 0 0 / 20%);
+    box-shadow: 0 0 5px rgb(0 0 0 / 20%);
+    background-color: #ffffff;
+}
+.survey-menu .slider-nav .slick-track:after, .survey-menu a:after, .survey-menu span:after, 
+.survey-menu span:before, .survey-menu a:before, .survey-menu span:before {
+    position: absolute;
+    background: #d8d8d8;
+    content: "";
+    z-index: 1;
+}
+/* .survey-menu a:before, .survey-menu span:before {
+    border-radius: 50%;
+    top: 50%;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    margin-top: -8px;
+} */
+.survey-menu .slider-nav .slick-track:after, .survey-menu a:after, .survey-menu span:after, 
+.survey-menu span:before, .survey-menu a:before, .survey-menu span:before {
+    position: absolute;
+    background: #d8d8d8;
+    content: "";
+    z-index: 1;
+}
+.survey-menu .slider-nav a, .survey-menu .slider-nav span {
+    padding: 10px 20px 10px 40px;
+    display: block;
+    color: #9a9a9a;
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+}
+/* .survey-menu .slider-nav .slick-track:after, .survey-menu a:after, .survey-menu span:after, .survey-menu span:before, .survey-menu a:before, .survey-menu span:before {
+    position: absolute;
+    background: #d8d8d8;
+    content: "";
+    z-index: 1;
+} */
+/* .survey-menu a:before, .survey-menu span:before {
+    border-radius: 50%;
+    top: 50%;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    margin-top: -8px;
+} */
+.dots {
+    border-radius: 50%;
+    top: 9%;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    background: #d8d8d8;
+
+}
+.active {
+    background-color: #1c3b71;
+}
+.dots2 {
+    border-radius: 50%;
+    top: 24%;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    background: #d8d8d8;
+}
+.dots3 {
+    border-radius: 50%;
+    top: 40%;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    background: #d8d8d8;
+}
+.dots4 {
+    border-radius: 50%;
+    top: 55%;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    background: #d8d8d8;
+}
+.dots5 {
+    border-radius: 50%;
+    top: 71%;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    background: #d8d8d8;
+}
+.dots6 {
+    border-radius: 50%;
+    top: 86%;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    background: #d8d8d8;
+}

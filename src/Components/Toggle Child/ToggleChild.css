@@ -1,0 +1,11 @@
+.react-switch-bg {
+    height: 24px !important;
+    width: 55px !important;
+    border-radius: 25px !important;
+}
+.react-switch-handle {
+    height: 22px !important;
+    width: 22px !important;
+    top: 6px !important;
+    left: 7px !important;
+}

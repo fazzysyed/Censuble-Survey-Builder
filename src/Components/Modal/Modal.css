@@ -1,0 +1,76 @@
+.add-question {
+    float: right;
+    margin-top: -35px;
+    color: #1c3b71;
+    cursor: pointer;
+}
+.quest-input {
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    margin-top: 32px;
+    background-color: #ffffff;
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgb(0 0 0 / 10%);
+}
+.btn-success {
+    color: gray;
+    background-color: #ffffff;
+    border-color: gray;
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    margin-top: 20px;
+}
+
+.btn-success:hover {
+    background-color: #1c3b71 !important;
+}
+.close-icon {
+    font-size: 25px;
+    color: #1c3b71;
+    cursor: pointer;
+}
+.save-modal {
+    border: none;
+    width: 50%;
+    margin-left: 12px;
+    margin-top: 20px;
+    background-color: #1c3b71;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+}
+.plus-ques {
+    font-size: 18px;
+    margin-right: 5px;
+}
+.add-quest {
+    color: #3a3a3a;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Poppins';
+    margin-bottom: 15px;
+    margin-top: 15px;
+    display: block;
+    margin-left: 14px;
+    position: relative;
+    top: 18px;
+}
+.dropdown-toggle:empty::after {
+    margin-left: 0;
+    float: right;
+    margin-top: 6px;
+    height: 11px;
+}
+.btn-success {
+    background-color: #ffffff;
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgb(0 0 0 / 10%);
+}
+.dropdown-menu {
+    width: 14rem;
+    text-align: center;
+}
