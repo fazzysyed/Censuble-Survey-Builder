@@ -10,10 +10,13 @@ import bootstrap from'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
 import Questions from './Components/Questions/Questions';
 import './Responsive.css';
+import { Provider } from 'react-redux';
+import store from "./store/store"
 
 function App() {
   const [active, setActive] =useState("Select");
   return (
+    <Provider store={store} >
     <div className="App">
         <Header/>
         <div className="wrapper survey-wrapper">
@@ -52,6 +55,7 @@ console.log(value,"Value")
         </div>
         
     </div>
+    </Provider>
   );
 }
 

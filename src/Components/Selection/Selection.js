@@ -1,7 +1,17 @@
-import React from 'react';
-import './Selection.css';  
+import React,{useState,useEffect} from 'react';
+import './Selection.css'; 
+import { useDispatch, useSelector } from "react-redux"; 
+import { GET_ACCOUNTS } from '../../store/actions/actionTypes';
 
-function Selection() {
+const Selection =() =>{
+
+    const accounts = useSelector(state => state.accounts);
+    const dispatch = useDispatch();
+
+useEffect(()=>{
+    dispatch(GET_ACCOUNTS)
+},[])
+
     return(
         <div id="survey-review" className="survey-review">
             <div className="content-area">
