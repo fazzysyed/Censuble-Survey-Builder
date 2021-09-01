@@ -1,12 +1,27 @@
-import React  from 'react';
+import React,{useState,useEffect}  from 'react';
 import Toggle from '../Toggle/Toggle';
 import { FaRegSmile } from 'react-icons/fa';
 import { Button } from 'react-bootstrap';
 import { BiLayerPlus } from 'react-icons/bi';
+import { useDispatch, useSelector } from "react-redux"; 
+
 import Modal from '../Modal/Modal';
 import './Questions.css';
+import { getAllQuestions } from '../../store/actions/actions';
+import { getAccounts } from '../../Services/Api';
 
 function Questions() {
+
+    const questions = useSelector(state => state.Reducer.questions);
+    const dispatch = useDispatch();
+
+
+useEffect(()=>{
+    dispatch(getAllQuestions())
+    console.log(questions,"questions")
+    getAccounts()
+
+},[])
     return (
         <div id="questions_con" className="assign-answer">
             <div className="answer-title">
@@ -19,7 +34,10 @@ function Questions() {
                     <Modal/>
                 </div>
 
-                <div id="questions-list" className="answers-bottom  ">
+            {questions.map((item)=>{
+                console.log(item,"GGG")
+                return(
+                    <div id="questions-list" className="answers-bottom  ">
                     <div className="answer-single dflex4 align-center space-between">
                         
                             <FaRegSmile className="smiley" />
@@ -34,54 +52,11 @@ function Questions() {
                         
                     </div>
                 </div>
+                );
+            })}
 
-                <div id="questions-list" className="answers-bottom  ">
-                    <div className="answer-single dflex4 align-center space-between">
-                        
-                            <FaRegSmile className="smiley" />
-                        
-                        <span className="question-text-survey2">How was your dining experience?</span>
-                        <span>
-                            <Toggle/>
-                        </span>
-                       
-                        <Button className="question-btn" >Child <BiLayerPlus className="layer-plus" /></Button>
-                        
-                        
-                    </div>
-                </div>
 
-                <div id="questions-list" className="answers-bottom  ">
-                    <div className="answer-single dflex4 align-center space-between">
-                        
-                            <FaRegSmile className="smiley" />
-                        
-                        <span className="question-text-survey2">How was your dining experience?</span>
-                        <span>
-                            <Toggle/>
-                        </span>
-                       
-                        <Button className="question-btn" >Child <BiLayerPlus className="layer-plus" /></Button>
-                        
-                        
-                    </div>
-                </div>
-
-                <div id="questions-list" className="answers-bottom  ">
-                    <div className="answer-single dflex4 align-center space-between">
-                        
-                            <FaRegSmile className="smiley" />
-                        
-                        <span className="question-text-survey2">How was your dining experience?</span>
-                        <span>
-                            <Toggle className="toggle-questions"/>
-                        </span>
-                       
-                        <Button className="question-btn" >Child <BiLayerPlus className="layer-plus" /></Button>
-                        
-                        
-                    </div>
-                </div>
+           
             </div>
         </div>
     );
