@@ -27,7 +27,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function SwipeableTemporaryDrawer() {
+const SwipeableTemporaryDrawer=({close})=> {
   const classes = useStyles();
   const [state, setState] = React.useState({
     
@@ -60,30 +60,45 @@ export default function SwipeableTemporaryDrawer() {
         <label className="add-quest">Add Question</label>
         <input className="quest-input"/>
         
-        <label className="add-quest">Question Type</label>
+        <label className="add-quest">Answer Type</label>
         <Dropdown>
           <Dropdown.Toggle variant="success" id="dropdown-basic">
           </Dropdown.Toggle>
 
         <Dropdown.Menu>
-          <Dropdown.Item href="#/action-1">Food</Dropdown.Item>
-          <Dropdown.Item href="#/action-2">Shopping</Dropdown.Item>
-          <Dropdown.Item href="#/action-3">Travel</Dropdown.Item>
+          <Dropdown.Item href="#/action-1">Faces</Dropdown.Item>
+          <Dropdown.Item href="#/action-2">Stars</Dropdown.Item>
+          <Dropdown.Item href="#/action-3">Thumbs</Dropdown.Item>
+          <Dropdown.Item href="#/action-4">Hearts</Dropdown.Item>
+          <Dropdown.Item href="#/action-5">Likert</Dropdown.Item>
+          <Dropdown.Item href="#/action-5">Mutiple Choice</Dropdown.Item>
+          <Dropdown.Item href="#/action-5">Select All</Dropdown.Item>
+
+
         </Dropdown.Menu>
         </Dropdown>
 
-        <label className="add-quest">Add Question</label>
-        <input className="quest-input"/>
-        
-        <label className="add-quest">Question Type</label>
+        <label className="add-quest">Categories</label>
+  
         <Dropdown>
           <Dropdown.Toggle variant="success" id="dropdown-basic">
           </Dropdown.Toggle>
 
         <Dropdown.Menu>
-          <Dropdown.Item href="#/action-1">Food</Dropdown.Item>
-          <Dropdown.Item href="#/action-2">Shopping</Dropdown.Item>
-          <Dropdown.Item href="#/action-3">Travel</Dropdown.Item>
+          <Dropdown.Item href="#/action-1">1</Dropdown.Item>
+          <Dropdown.Item href="#/action-2">2</Dropdown.Item>
+          <Dropdown.Item href="#/action-3">3</Dropdown.Item>
+        </Dropdown.Menu>
+        </Dropdown>
+        <label className="add-quest">Status</label>
+        <Dropdown>
+          <Dropdown.Toggle variant="success" id="dropdown-basic">
+          </Dropdown.Toggle>
+
+        <Dropdown.Menu>
+          <Dropdown.Item href="#/action-1">Active</Dropdown.Item>
+          <Dropdown.Item href="#/action-2">InActive</Dropdown.Item>
+
         </Dropdown.Menu>
         </Dropdown>
 </>
@@ -116,3 +131,4 @@ export default function SwipeableTemporaryDrawer() {
     </div>
   );
 }
+export default SwipeableTemporaryDrawer;

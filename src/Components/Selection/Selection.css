@@ -1,32 +1,38 @@
 .content-area {
-    padding: 15px 30px;
-    box-shadow: 0 0 10px rgb(0 0 0 / 15%);
-    background-color: #ffffff;
-    margin: 20px 0;
+  padding: 15px 30px;
+  box-shadow: 0 0 10px rgb(0 0 0 / 15%);
+  background-color: #ffffff;
+  margin: 20px 0;
 }
 .survey-save-publish h3 {
-    color: #3a3a3a;
-    font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 15px;
+  color: #3a3a3a;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 15px;
 }
-h1, h2, h3, h4, h5, h6, p {
-    margin: 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
 }
 select {
-    color: #3a3a3a;
-    border-radius: 7px;
-    border: 1px solid #d8d8d8;
-    font-size: 16px;
-    margin-bottom: 15px;
-    margin-top: 15px;
-    display: block;
-    position: relative;
-    padding: 10px;
-    text-align: left;
-    width: 100%;
-    line-height: 53px;
-    box-shadow: 0 0 10px rgb(0 0 0 / 15%);
-    background-color: #ffffff;
-    cursor: pointer;
+  color: #3a3a3a;
+  border-radius: 7px;
+  border: 1px solid #d8d8d8;
+  font-size: 16px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  display: block;
+  position: relative;
+  padding: 10px;
+  text-align: left;
+  width: 100%;
+  line-height: 53px;
+  box-shadow: 0 0 10px rgb(0 0 0 / 15%);
+  background-color: #ffffff;
+  cursor: pointer;
 }

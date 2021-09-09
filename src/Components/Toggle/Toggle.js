@@ -11,6 +11,7 @@ class Toggle extends Component {
   
     handleChange(checked) {
       this.setState({ checked });
+      this.props.handler()
     }
   
     render() {

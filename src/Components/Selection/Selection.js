@@ -1,7 +1,8 @@
 import React,{useState,useEffect} from 'react';
 import './Selection.css'; 
 import { useDispatch, useSelector } from "react-redux"; 
-import { getAllAccounts } from '../../store/actions/actions';
+import { createQuestion, getAllAccounts } from '../../store/actions/actions';
+import { getAccounts } from '../../Services/Api';
 
 const Selection =() =>{
 
@@ -11,7 +12,17 @@ const Selection =() =>{
 
 useEffect(()=>{
     dispatch(getAllAccounts())
-    console.log(accounts,"Hello")
+//     dispatch(createQuestion({
+//         question_text: "Test",
+//   answer_type: "hearts",
+//   status: "active",
+//   category_ids: [
+//     "1",
+//     "3",
+//     "5"
+//   ]
+//     }))
+    
 
 },[])
 
@@ -24,8 +35,7 @@ useEffect(()=>{
                         <select id="account_option" multiple="true">
                     {accounts.map((item)=>{
                         return(
-                            <option  value={item.uuid}>{item.name}</option>
-
+                            <option value={item.uuid}>{item.name}</option>
                         );
                     })}
                         </select>

@@ -1,6 +1,6 @@
 import React,{useState,useEffect}  from 'react';
 import Toggle from '../Toggle/Toggle';
-import { FaRegSmile } from 'react-icons/fa';
+import { FaRegSmile,FaStar } from 'react-icons/fa';
 import { Button } from 'react-bootstrap';
 import { BiLayerPlus } from 'react-icons/bi';
 import { useDispatch, useSelector } from "react-redux"; 
@@ -11,17 +11,32 @@ import { getAllQuestions } from '../../store/actions/actions';
 import { getAccounts } from '../../Services/Api';
 
 function Questions() {
+    const [selectedIds,setSelectedIds] = useState([]);
 
     const questions = useSelector(state => state.Reducer.questions);
     const dispatch = useDispatch();
 
+  const  handleSelectionMultiple = async (item) => {
+ 
+        var selectedIdss = [...selectedIds] // clone state
+        if (selectedIds.includes(item.id)){
+          selectedIdss = selectedIds.filter((_id) => _id !== item.id);
+     
+        }
+      
+        else selectedIds.push(item.id);
+        
 
+    
+         setSelectedIds(selectedIdss)
+      };
 useEffect(()=>{
     dispatch(getAllQuestions())
-    console.log(questions,"questions")
+  
     getAccounts()
 
 },[])
+console.log(questions,"questions")
     return (
         <div id="questions_con" className="assign-answer">
             <div className="answer-title">
@@ -34,17 +49,17 @@ useEffect(()=>{
                     <Modal/>
                 </div>
 
-            {questions.map((item)=>{
-                console.log(item,"GGG")
+             {questions.map((item)=>{
+     
                 return(
-                    <div id="questions-list" className="answers-bottom  ">
+                    <div id={item.id} className="answers-bottom  ">
                     <div className="answer-single dflex4 align-center space-between">
                         
-                            <FaRegSmile className="smiley" />
+                            <FaRegSmile className="smiley" /> 
                         
-                        <span className="question-text-survey2">How was your dining experience?</span>
+                        <span className="question-text-survey2">{item.question_text}</span>
                         <span>
-                            <Toggle/>
+                            <Toggle  handler = {()=>handleSelectionMultiple(item)}/>
                         </span>
                        
                         <Button className="question-btn" >Child <BiLayerPlus className="layer-plus" /></Button>
@@ -53,7 +68,7 @@ useEffect(()=>{
                     </div>
                 </div>
                 );
-            })}
+            })} 
 
 
            

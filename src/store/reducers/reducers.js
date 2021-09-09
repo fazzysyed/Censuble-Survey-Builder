@@ -1,8 +1,9 @@
-import {GET_ACCOUNTS, GET_QUESTIONS} from "../actions/actionTypes"
+import {GET_ACCOUNTS, GET_ANSWERS, GET_QUESTIONS} from "../actions/actionTypes"
 
 const initialState = {
   accounts : [],
   questions : [],
+  answers:[]
 };
 
 const Reducer =(state = initialState, action)=> {
@@ -22,6 +23,11 @@ console.log(payload,"Payload")
         ...state,
         questions:payload
       }
+      case GET_ANSWERS:
+        return{
+          ...state,
+          questions:payload
+        }
   
 
     default:
